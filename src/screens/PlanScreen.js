@@ -76,7 +76,7 @@ function PlanScreen() {
                 //we have a session, let's redirect to checkout
                 //init stripe
                 /* global Stripe */
-                const stripe = await loadStripe("pk_test_51J7B7HSDFwigtwEw2EBRuI5WVv7J4RkAf2UhI8KYeFWl68cKFlAfTb4RBZTt7LK5rsXUrMjle2fEgw9NbLGjkkFV006rs5KEW7");
+                const stripe = await loadStripe("Your_API_Key");
                 stripe.redirectToCheckout({ sessionId });
             };
 
@@ -96,7 +96,7 @@ function PlanScreen() {
 
             {Object.entries(products).map(([productId, productData]) => {
                 //add some logic to check if user's subscription is active...
-                //const isCurrentPlan = productData.name?.toLowerCase().includes(subscription?.role);
+                //const isCurrentPackage = productData.name?.toLowerCase().includes(subscription?.role);
                 const isCurrentPackage = productData.name?.includes(subscription?.role);
 
                 return (
