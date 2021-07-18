@@ -7,7 +7,6 @@
   display: flex;
   overflow-y: hidden;
   overflow-x: scroll;
-  white-space: nowrap;
   padding: 20px;
 }
 
@@ -30,4 +29,8 @@
 
 .row__posterLarge {
   max-height: 250px;
+}
+
+.row__posterLarge:hover {
+  transform: scale(1.09);
 }
